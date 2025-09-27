@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form - 12336</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="menu">
+      <li><a href="HtmlCssBasic_B_12336.html">Kembali ke Halaman Utama</a></li>
+      <li><a href="JSBasic_B_12336.html">Halaman Javascript</a></li>
+  </ul>
+
+  <h2>Form Pendaftaran Mahasiswa</h2>
+
+  <form onsubmit="return validateForm()">
+    <table cellspacing="4" cellpadding="4">
+    <tr>
+      <td><strong>Nama Mahasiswa</strong></td>
+      <td><input requiredtype="text" id="namamhs" name="namamhs" size="30"/></td>
+    </tr>
+    <tr>
+      <td><strong>Jenis Kelamin</strong></td>
+      <td>
+        <input type="radio" name="gender" value="Laki-laki" required>Laki-laki
+        <input type="radio" name="gender" value="Perempuan" required>Perempuan
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Program Studi</strong></td>
+      <td>
+        <select id="prodi" name="prodi" required>
+          <option value="">-- Pilih Prodi --</option>
+          <option value="informatika">Informatika</option>
+          <option value="Teknik Industri">Teknik Industri</option>
+          <option value="Sistem Informasi">Sistem Informasi</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Email</strong></td>
+      <td><input type="email" id="email" name="email" required></td>
+    </tr>
+    <tr>
+      <td><strong>Password</strong></td>
+      <td><input type="password" id="password" name="password"required></td>
+    </tr>
+    <tr>
+      <td><strong>Hobi</strong></td>
+      <td>
+        <input type="checkbox" name="hobi" value="Roblox">Roblox
+        <input type="checkbox" nama="hobi" value="Magic chess">Magic chess
+        <input type="checkbox" nama="hobi" value="Coding">Coding
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Film Favorite</strong></td>
+      <td>
+        <input type="checkbox" name="film" value="Drama">Drama
+        <input type="checkbox" name="film" value="Action">Action
+        <input type="checkbox" name="film" value="Romance">Romance
+        <input type="checkbox" nama="film" value="Comedy">Comedy
+        <input type="checkbox" nama="film" value="Horror">Horror
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Deskripsi</strong></td>
+      <td><textarea id="deskripsi" name="deskripsi" rows="4" cols="30" required></textarea></td>
+    </tr>
+    <tr>
+      <td><strong>Upload Foto</strong></td>
+      <td><input type="file" id="foto" name="foto" accept=".jpg,.png" required></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align: center;">
+        <button type="submit" id="simpan">Simpan</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<script>
+function validateForm(){
+  alert("Data Berhasil Disimpan !");
+  return true;
+  }
+  </script>
+  </table>
+</form>
+
+  <script>
+    const validateForm = () =>alert("Data Berhasil Disimpan !");
+  </script>
+</body>
+</html>
