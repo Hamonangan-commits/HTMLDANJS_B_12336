@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Basic - 12336</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="menu">
+      <li><a href="HtmlCssBasic_A_12336.html" >Kembali ke Halaman Utama</a></li>
+      <li><a href="HtmlForm_A_12336.html" >Halaman Form</a></li>
+  </ul>
+
+  <h2>Belajar JavaScript Fundamental</h2>
+
+  <div class="card">
+    <h3>Manipulasi Teks</h3>
+    <p id="teks">Teks ini bisa berubah!</p>
+    <button onclick="ubahBiru()">Ubah ke Biru</button>
+    <button onclick="ubahMerah()">Ubah ke Merah</button>
+    <button onclick="ubahHijau()">Ubah ke Hijau</button>
+  </div>
+
+  <div class="card">
+    <h3>Input Nama</h3>
+    <input type="text" id="inputNama" placeholder="Ketik namamu...">
+    <button onclick="tampilkanNama()">Tampilkan</button>
+    <p id="output"></p>
+  </div>
+
+  <div class="card">
+    <h3>Hitung Kuadrat</h3>
+    <input type="number" id="angka" placeholder="Masukkan angka...">
+    <button onclick="hitungKuadrat()">Hitung</button>
+    <p id="hasil"></p>
+  </div>
+
+  <script>
+    function ubahBiru(){
+      let teks = document.getElementById("teks");
+      teks.innerHTML = "Teks sudah berubah menjadi biru!";
+      teks.style.color = "blue";
+    }
+    function ubahMerah(){
+      let teks = document.getElementById("teks")
+      teks.innerHTML = "Sekarang teks bewarna merah!";
+      teks.style.color = "red";
+    }
+
+    function ubahHijau(){
+      let teks = document.getElementById("teks");
+      teks.innerHTML = "Sekarang teks bewarna hijau!";
+      teks.style.color = "green";
+    }
+
+    function tampilkanNama(){
+      let nama = document.getElementById("inputNama").value;
+      if(nama === ""){
+        alert("Silakan isi nama dulu.");
+      }else{
+        alert("Halo, " + nama + "! Selamat Belajar HTML & JS :D");
+        document.getElementById("output").innerText = "Selamata Datang, " + nama;
+      }
+    }
+
+    function hitungKuadrat(){
+      let angka = document.getElementById("angka").value;
+      if (angka === ""){
+        alert("Masukkan angka terlebih dahulu");
+      } else {
+        let hasil = angka * angka;
+        document.getElementById("hasil").innerHTML = "Hasil kuadrat dari " + angka + " adalah " + hasil;
+      }
+    }
+  </script>
+</body>
+</html>
